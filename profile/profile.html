@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Your profile</title>
+        <link rel="stylesheet" href="profile.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="container">
+            <!--nav-->
+        <div class="nav">
+            <div class="money-tracker-logo" style="font-weight: 700">
+                <img src="Wallet_alt.png" alt="logo"/>
+                MoneyTracker
+            </div>
+            <div class="money-tracker-word" style=" background-color: #5C9C94; color:#ffff">
+                <i class="fa fa-user-o" aria-hidden="true"> User Profile</i>
+                 
+            </div>
+            <div class="money-tracker-word" >
+                <i class="fa fa-th-large" aria-hidden="true"> Dashboard</i>
+               
+            </div>
+            <div class="money-tracker-word">
+                <i class="fa fa-pie-chart" aria-hidden="true">  Chart</i>
+               
+            </div>
+        </div>
+        
+
+        <div class="right-box">
+            <!--right box-->
+            <div class="welcome-text">
+                <div class="text-1">
+                    Welcome, NRR
+                </div>
+                <div class="text-2">
+                    This is your profile!
+                </div>
+            </div>
+        </div>
+        <button class="open-button" onclick="openForm()"><i class="fa fa-pencil" aria-hidden="true"> Edit</i></button>
+
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                <input type="text" value="0926183842" name="phone" required>
+                <input type="password" placeholder="Current Password" name="psw" required>
+                <input type="password" placeholder="New Password" name="psw" required>
+                <input type="password" placeholder="Confirm new Password" name="psw" required>
+                 <button type="submit" class="btn">Save</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                </form>
+</div>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+    </body>
+</html>
